@@ -260,12 +260,12 @@ export default class ViewPager extends PureComponent {
     }
 
     keyExtractor (item, index) {
-        return index;
+        return index.toString();
     }
 
     renderRow ({ item, index }) {
         const { width, height } = this.state;
-        let page = this.props.renderPage(item, index);
+        let page = this.props.renderPage(item, index.toString());
 
         const layout = {
             width,
